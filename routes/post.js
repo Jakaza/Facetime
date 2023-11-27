@@ -1,4 +1,5 @@
 const Post = require('../models/Post')
+const User = require('../models/User');
 const router = require('express').Router()
 
 router.get('/posts', async (req, res) =>{
@@ -82,6 +83,29 @@ router.put('/posts/:id/like', async (req, res) =>{
     }catch(err){
         res.status(500).json(err)
     }
+})
+
+// Feeds
+
+router.get('/feeds', async (req, res) =>{
+
+    try{
+        const currentUser = await User.findById(req.body.userId)
+        const userPosts = await Post.find({userId: currentUser._id})
+
+        const friendsPosts = await Promise.all(
+            currentUser.followins.map((friendId) =>{
+                return Post.find({userId: friendId})
+            })
+        )
+
+        res.status(200).json(friendsPosts)
+
+    }catch(err){
+        res.status(500).json(err)
+    }
+
+
 })
 
 
