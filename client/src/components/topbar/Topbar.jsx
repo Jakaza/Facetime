@@ -1,4 +1,8 @@
 import React from 'react'
+import './topbar.css'
+import SearchIcon from '@mui/icons-material/Search';
+import PersonIcon from '@mui/icons-material/Person';
+
 
 export const TopBar = () => {
     return (
@@ -8,7 +12,7 @@ export const TopBar = () => {
         </div>
         <div className="topbarCenter">
             <div className="searchBar">
-                <Search/>
+                <SearchIcon/>
                 <input placeholder='Search for a post ' className='searchInput' />
             </div>
         </div>
@@ -19,7 +23,7 @@ export const TopBar = () => {
             </div>
             <div className="topbarIcon">
                 <div className="topbarIconItem">
-                    <Person/>
+                    <PersonIcon/>
                     <span className="topbarIconBadge">
                         1
                     </span>
