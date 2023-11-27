@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const morgan = require('morgan')
 const userRouter = require('./routes/user')
 const authRouter = require('./routes/auth')
+const postRouter = require('./routes/post')
 const helmet = require('helmet')
 require('dotenv').config()
 const app = express()
@@ -27,6 +28,7 @@ app.use(morgan('common'))
 
 app.use(userRouter)
 app.use(authRouter)
+app.use(postRouter)
 
 
 app.listen(port, ()=>{
