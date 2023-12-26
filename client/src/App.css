@@ -1,9 +1,10 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+/* 
 
 .logo {
   height: 6em;
@@ -39,4 +40,57 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.Navbar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar{
+  display: flex;
+  align-items: center;
+  background-color: #e9ecef;
+  width: 300px;
+  height: 40px;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.searchBar input{
+  height: inherit;
+  margin: 0;
+  height: 35px;
+  width: 280px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #6c757d;
+  background: transparent;
+}
+
+.links, 
+.profileContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.links ul, 
+.profileContainer ul{
+  display: flex;
+  align-items: center;
+}
+
+
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #6c757d;
+  border-radius: 50%;
 }
