@@ -1,11 +1,14 @@
-import { Home } from "./pages/home/Home"
+import { useState } from 'react'
 
 function App() {
 
   return (
-    <div>
-       <Home/>
+    <>
+    <div className='Navbar'>
+      
     </div>
+
+    </>
   )
 }
 

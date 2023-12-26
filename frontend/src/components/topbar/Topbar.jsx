@@ -1,7 +1,5 @@
 import React from 'react'
 import './topbar.css'
-import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
 
 
 export const TopBar = () => {
@@ -22,12 +20,7 @@ export const TopBar = () => {
                 <span className='topbarLink'>Timeline</span>
             </div>
             <div className="topbarIcon">
-                <div className="topbarIconItem">
-                    <PersonIcon/>
-                    <span className="topbarIconBadge">
-                        1
-                    </span>
-                </div>
+
             </div>
         </div>
      </div>
